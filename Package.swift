@@ -1,10 +1,12 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.4
+
 import PackageDescription
 
 let package = Package(
     name: "PopoverResize",
+    defaultLocalization: "en",
     platforms: [
-        .macOS(.v12)
+        .macOS(.v10_11)
     ],
     products: [
         .library(
@@ -20,5 +22,6 @@ let package = Package(
             resources: [
                 .copy("resources")  // This will copy the resources directory as-is
             ])
-    ]
+    ],
+    swiftLanguageVersions: [.v5]
 )
